@@ -23,9 +23,9 @@ $python video.py
 ### 이 안에 있는 index.html파일은 서버로 구축되지 않고 그냥 파일만 실행했을 때에는 동작하지 않음  
 #### github server  
 - image_green_black : 녹색과 검정색의 이미지를 구분하는 모델이 들어있음  
-
+[https://mtinet.github.io/teachableMachine/web/github%20server/image_green_black/](https://mtinet.github.io/teachableMachine/web/github%20server/image_green_black/)  
 - pose_left_right_hand : 왼손과 오른손의 포즈를 구분하는 모델이 들어있음  
-
+[https://mtinet.github.io/teachableMachine/web/github%20server/pose_left_right_hand/](https://mtinet.github.io/teachableMachine/web/github%20server/pose_left_right_hand/)  
 #### python server  
 - 해당 파일이 있는 폴더로 이동해서 아래 명령어로 파이썬 서버를 구동하고 브라우저로 localhost:8080에 접속하면 자동으로 구동됨  
 ```{.python}  
