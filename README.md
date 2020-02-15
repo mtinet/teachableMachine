@@ -8,6 +8,7 @@
 - PIL을 설치할 때는 pip install pillow로 설치를 해야함  
 - serial을 설치할 때는 pip install pyserial로 설치를 해야함
 - cv2는 pip install opencv-python로 설치해야 함  
+
 OpenCV의 main module만 사용한다면 아래처럼 설치
 ```{.python} 
 pip install opencv-python
