@@ -2,6 +2,15 @@ import tensorflow.keras
 from PIL import Image, ImageOps
 import numpy as np
 import cv2
+import serial
+
+#setup serial communication
+ser = serial.Serial(
+    # check your Serial port
+    # port='/dev/cu.usbmodem141201',
+    port='COM3',
+    baudrate=9600,
+)
 
 np.set_printoptions(suppress=True)
 
@@ -10,6 +19,7 @@ model = tensorflow.keras.models.load_model('keras_model.h5')
 data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
 cap = cv2.VideoCapture(0)
+
 
 while(True):
     # Capture frame-by-frame
@@ -35,6 +45,12 @@ while(True):
     # print(prediction[:, 0])
     # print(prediction[:, 1])
     # print(prediction[:, 2])
+
+    if prediction[:, 0] > 0.5 :
+        sendA = (str('a')+'\n').encode("utf-8")
+        ser.write(sendA)
+        print(sendA)
+        
 
     if cv2.waitKey(20) & 0xFF == ord('q'):
         break
