@@ -27,7 +27,14 @@ while(True):
     data[0] = normalized_image_array
 
     prediction = model.predict(data)
+
+    # print(type(prediction))
     print(prediction)
+
+    # numpy.ndarray로 되어 있는 prediction을 분해하는 방법
+    # print(prediction[:, 0])
+    # print(prediction[:, 1])
+    # print(prediction[:, 2])
 
     if cv2.waitKey(20) & 0xFF == ord('q'):
         break
