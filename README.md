@@ -31,6 +31,6 @@ $python video.py
 ```{.python}  
 $python app.py  
 ```  
-- 왼쪽을 바라보는 포즈와 오른쪽을 바라보는 포즈로 학습된 모델임  
+- 왼손을 드는 포즈와 오른손을 드는 포즈로 학습된 모델임  
 - 모델파일은 my_model폴더에 들어 있음  
 - 웹 기반 모델은 python을 기반으로 하는 tensorflow, keras 라이브러리를 사용하지 않으며, tensorflow.js를 사용하고, 모델파일과 메타데이타파일은 json파일로, 웨이트 파일은 바이너리파일로 되어 있다.  
