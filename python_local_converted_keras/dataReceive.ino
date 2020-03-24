@@ -1,7 +1,12 @@
-const int LED = 13;
+const int red = 13;
+const int blue = 12;
+const int green = 11;
+
 
 void setup() {
-  pinMode(LED, OUTPUT);
+  pinMode(red, OUTPUT);
+  pinMode(blue, OUTPUT);
+  pinMode(green, OUTPUT);
   Serial.begin(9600);
 }
 
@@ -10,9 +15,16 @@ void loop() {
     char input = Serial.read();
     
     if (input == 'a') {
-      digitalWrite(LED, HIGH);
-    } else {
-      digitalWrite(LED, LOW);
-    }
+      digitalWrite(red, HIGH);
+      delay(100);
+      digitalWrite(red, LOW);
+    } else if (input == 'b') {
+      digitalWrite(blue, HIGH);
+      delay(100);
+      digitalWrite(blue, LOW);
+    } else if (input == 'c') {
+      digitalWrite(green, HIGH);
+      delay(100);
+      digitalWrite(green, LOW);
   }
 }
