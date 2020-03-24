@@ -8,7 +8,7 @@ import serial
 ser = serial.Serial(
     # check your Serial port
     # port='/dev/cu.usbmodem141201',
-    port='COM3',
+    port='COM17',
     baudrate=9600,
 )
 
@@ -24,7 +24,7 @@ cap = cv2.VideoCapture(0)
 while(True):
     # Capture frame-by-frame
     ret, frame = cap.read()
-  
+
     # Display the resulting frame
     cv2.imshow('frame',frame)
 
@@ -46,11 +46,21 @@ while(True):
     # print(prediction[:, 1])
     # print(prediction[:, 2])
 
-    if prediction[:, 0] > 0.5 :
-        sendA = (str('a')+'\n').encode("utf-8")
-        ser.write(sendA)
-        print(sendA)
-        
+    if prediction[:, 0] > 0.7 :
+        send = (str('a')+'\n').encode("utf-8")
+        ser.write(send)
+        print(send)
+
+    if prediction[:, 1] > 0.7 :
+        send = (str('b')+'\n').encode("utf-8")
+        ser.write(send)
+        print(send)
+
+    if prediction[:, 2] > 0.7 :
+        send = (str('c')+'\n').encode("utf-8")
+        ser.write(send)
+        print(send)
+
 
     if cv2.waitKey(20) & 0xFF == ord('q'):
         break
