@@ -23,7 +23,7 @@ pip install opencv-contrib-python
 $python video.py  
 ```  
 ### 그 외 파일들의 기능은 다음과 같다.  
-- keras_model.h5 : teachable machine 홈페이지에서 Export한 모델파일, 이 파일이 머신러닝 학습의 결과이며, 이 파일을 이용해 학습된 내용을 활용함  
+- keras_model.h5 : teachable machine 홈페이지에서 Export한 모델파일, 이 파일이 머신러닝 학습의 결과이며, 이 파일을 이용해 학습된 내용을 활용함, 현재는 파란색, 흰색, 초록색을 구분하는 모델파일이 올라가 있음  
 - labels : 모델을 만들 때 레이블을 몇개로 해 학습을 시켰느냐에 따라 다양한 반응을 낼 수 있음  
 - image : 사진 한 장으로 모델 파일을 구동해 추론한 결과를 확인할 수 있는 파이썬 파일  
 - imageResize : cv2를 이용해 이미지 사이즈를 바꾸는 예제, teachable machine에서 카피해서 만든 image 파일은 PIL(pillow)를 사용해 이미지 사이즈를 변경하는데 이것이 영상을 처리할 때는 오류를 내기 때문에 영상을 추론하는 최종 파일인 video.py파일은 cv2로 이미지 사이즈를 변경하는 방법을 적용해야 했음  
