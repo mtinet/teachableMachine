@@ -1,13 +1,14 @@
 # teachableMachine
 
 ## 1. python_local_converted_keras  
-### 파이썬에 tensorflow, keras, PIL(pillow), numpy, cv2, serial 라이브러리를 설치해 사용함  
+### 파이썬에 tensorflow, PIL(pillow), numpy, cv2, serial 라이브러리를 설치해 사용함  
 - 로컬에서 웹캠 영상을 가져와서 학습된 모델에 있는 레이블의 비율로 데이터를 출력함  
-- tensorflow는 아직 3.7까지만 지원을 하므로, 파이썬을 3.7버전으로 설치해야 함  
+- tensorflow는 아직 python 3.7까지만 지원을 하므로, 파이썬을 3.7버전으로 설치해야 함  
+- tensorflow를 설치할 때는 pip install tensorflow==1.15 로 설치를 해야함, 최근에 tensorflow가 2.0으로 버전 업그레이드가 되면서 그냥 pip install tensorflow 를 할 경우 자동으로 2.0버전이 설치되고, 우리가 사용하고 있는 파이썬에서 라이브러리 구동이 안됨. 따라서 이전 버전을 강제로 설치해야함    
 - 그 외 오류는 오류나는 부분을 카피해서 구글에 물어보면 해답을 얻을 수 있음  
-- PIL을 설치할 때는 pip install pillow로 설치를 해야함  
-- serial을 설치할 때는 pip install pyserial로 설치를 해야함
-- cv2는 pip install opencv-python로 설치해야 함  
+- PIL을 설치할 때는 pip install pillow 로 설치를 해야함  
+- serial을 설치할 때는 pip install pyserial 로 설치를 해야함
+- cv2는 pip install opencv-python 로 설치해야 함  
 
 OpenCV의 main module만 사용한다면 아래처럼 설치
 ```{.python} 
